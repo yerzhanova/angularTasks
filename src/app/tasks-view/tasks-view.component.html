@@ -1,0 +1,52 @@
+
+<!--<h2>Spy Directive</h2>-->
+
+<!--<input [(ngModel)]="newName" (keyup.enter)="addHero()">-->
+<!--<button (click)="addHero()">Add Hero</button>-->
+<!--<button (click)="reset()">Reset Heroes</button>-->
+<!--<button (click)="removeHero(newName)">Remove Heroes</button>-->
+
+<!--<p></p>-->
+<!--<div *ngFor="let hero of heroes" appSpy class="heroes">-->
+  <!--{{hero}}-->
+<!--</div>-->
+<!--<h4>&#45;&#45; Spy Lifecycle Hook Log &#45;&#45;</h4>-->
+<!--<div *ngFor="let msg of logs">{{msg}}</div>-->
+<!--<div *ngFor="let task of tasks">-->
+  <!--{{task.id}} - {{task.name}}-->
+<!--</div>-->
+
+
+<div class="panel">
+  {{123 | currency:'EUR'}}
+  <div><input [(ngModel)]="task.name" placeholder = "Модель" />
+    <button (click)="addTask(task.name)">Добавить</button>
+  </div>
+  vhnghj
+  <table>
+    <tr *ngFor="let task of tasks ">
+      <td>{{task.id}} - {{task.name | minePipe}}</td>
+    </tr>
+  </table>
+  <input [(ngModel)]="power">
+  <p>
+    Super Hero Power: {{power | uppercase}}
+  </p>
+  <p [ngClass]="classes">[ngClass] binding to the classes property making this blue</p>
+</div>
+<table>
+  <tr>
+    <td [colSpan]="5">Three-Four</td>
+  </tr>
+</table>
+<input type="text" value="Sarah" id="inputtt">
+<h2>Async Hero Message and AsyncPipe</h2>
+<p>Message: {{ message$ | async | uppercase }}</p>
+<button (click)="resend()">Resend</button>
+<!--<div>-->
+  <!--<p>Имя пользователя: {{user?.name}}</p>-->
+  <!--<p>Возраст пользователя: {{user?.age}}</p>-->
+<!--</div>-->
+<!--<app-add-task></app-add-task>-->
+<!--<app-add-task></app-add-task>-->
+{{date| date }}

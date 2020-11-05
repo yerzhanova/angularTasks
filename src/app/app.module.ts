@@ -9,18 +9,25 @@ import { TasksViewComponent } from './tasks-view/tasks-view.component';
 
 import { TaskService} from "./task.service";
 import { AddTaskComponent } from './add-task/add-task.component'
+import {LogService} from "./log.service";
+import { HttpClientModule } from '@angular/common/http';
+import { EditTaskComponent } from './edit-task/edit-task.component';
+import { MinePipePipe } from './mine-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     TasksViewComponent,
-    AddTaskComponent
+    AddTaskComponent,
+    EditTaskComponent,
+    MinePipePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [  ],
+  providers: [ TaskService, LogService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
